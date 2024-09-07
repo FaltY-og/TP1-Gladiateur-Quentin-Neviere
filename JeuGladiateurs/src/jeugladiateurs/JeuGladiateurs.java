@@ -17,7 +17,7 @@ public class JeuGladiateurs {
     Personnage Bob = new Personnage();
     Personnage Igor = new Personnage();
     // </editor-fold>
-        System.out.println("jeugladiateurs.JeuGladiateurs.main()");
+    
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
