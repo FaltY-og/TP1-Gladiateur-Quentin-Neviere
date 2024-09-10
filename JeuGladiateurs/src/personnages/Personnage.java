@@ -7,9 +7,7 @@ public class Personnage {
     int valeurMaxAttaque;
     int valeurDefense;
     int initiative;
-    // <editor-fold defaultstate="collapsed" desc="Attributs">
-    // TODO : Mettre vos attributs ici
-    // </editor-fold>
+    
 
     
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
@@ -28,7 +26,7 @@ public class Personnage {
         valeurDefense = 0;
         initiative = 0;
     }
-    // </editor-fold>
+   
 
     public String getNom() {
         return nom;
@@ -69,17 +67,26 @@ public class Personnage {
     public void setInitiative(int initiative) {
         this.initiative = initiative;
     }
-    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    // TODO : Les getters
-    // TODO : Les setters
-    // </editor-fold>
+    
+    
 
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
-        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+        System.out.println("\n");
+        System.out.println(getNom());
+        System.out.println("Attaque : " + getValeurMaxAttaque());
+        System.out.println("Défense : " + getValeurDefense());
+        System.out.println("Points de vie : " + getPointsDeVie());
+        System.out.println("Initiative : " + getInitiative());
+        if (pointsDeVie >= 1) {
+            System.out.println("Satut : Vivant");
+        } else {
+            System.out.println("Satut : Mort");
+        }
+        
     }
 
     private int attaqueCalcul() {
@@ -98,4 +105,5 @@ public class Personnage {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
     }
     // </editor-fold>
+    
 }
