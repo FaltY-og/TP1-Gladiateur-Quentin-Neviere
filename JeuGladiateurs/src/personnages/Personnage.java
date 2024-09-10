@@ -76,15 +76,15 @@ public class Personnage {
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
         System.out.println("\n");
-        System.out.println(getNom());
-        System.out.println("Attaque : " + getValeurMaxAttaque());
-        System.out.println("Défense : " + getValeurDefense());
-        System.out.println("Points de vie : " + getPointsDeVie());
-        System.out.println("Initiative : " + getInitiative());
+        System.out.println("\t" + getNom());
+        System.out.println("\t Attaque : " + getValeurMaxAttaque());
+        System.out.println("\t Défense : " + getValeurDefense());
+        System.out.println("\t Points de vie : " + getPointsDeVie());
+        System.out.println("\t Initiative : " + getInitiative());
         if (pointsDeVie >= 1) {
-            System.out.println("Satut : Vivant");
+            System.out.println("\t Satut : Vivant");
         } else {
-            System.out.println("Satut : Mort");
+            System.out.println("\t Satut : Mort");
         }
         
     }

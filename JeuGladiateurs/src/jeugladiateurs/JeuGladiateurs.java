@@ -29,7 +29,7 @@ public class JeuGladiateurs {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
-    // TODO : La boucle contenant les étapes du combat
+    affichage.afficherDebutCombat();
     // TODO : Après la boucle, afficher le résultat du combat
     // </editor-fold>
     }
