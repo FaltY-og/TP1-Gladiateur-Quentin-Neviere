@@ -30,9 +30,45 @@ public class Personnage {
     }
     // </editor-fold>
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
+    public String getNom() {
+        return nom;
+    }
+
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    public int getValeurMaxAttaque() {
+        return valeurMaxAttaque;
+    }
+
+    public int getValeurDefense() {
+        return valeurDefense;
+    }
+
+    public int getInitiative() {
+        return initiative;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public void setValeurMaxAttaque(int valeurMaxAttaque) {
+        this.valeurMaxAttaque = valeurMaxAttaque;
+    }
+
+    public void setValeurDefense(int valeurDefense) {
+        this.valeurDefense = valeurDefense;
+    }
+
+    public void setInitiative(int initiative) {
+        this.initiative = initiative;
+    }
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
     // TODO : Les getters
     // TODO : Les setters
