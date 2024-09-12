@@ -15,7 +15,7 @@ public class JeuGladiateurs {
     CompteurDeTour tour = new CompteurDeTour();
     AffichageEcran affichage = new AffichageEcran();
     Personnage Bob = new Personnage("Bob l'Éponge", 15, 15, 70 , 15);
-    Personnage Igor = new Personnage("Igor l'empaleur", 25, 5, 5, 30);
+    Personnage Igor = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
     // </editor-fold>
     
     // **************************************************************************
@@ -32,6 +32,31 @@ public class JeuGladiateurs {
     affichage.afficherDebutCombat();
     
     
+    
+        do {
+            tour.afficheTour();
+            
+            for (int i = 0; i <= 100; i++) {
+                if (Bob.getInitiative() == i) {
+                    Bob.frapperPersonnage(Igor);
+                }
+                if (Igor.getInitiative() == i) {
+                    Igor.frapperPersonnage(Bob);
+                }
+            }
+            
+            affichage.afficherSeparateurInfosPerso();
+            
+            Bob.afficherInfosPersonnage();
+            Igor.afficherInfosPersonnage();
+            
+            Bob.setNewInitiativeRandom();
+            Igor.setNewInitiativeRandom();
+            
+            tour.augmenteTour();
+            
+            affichage.afficherSeparateurDeTour();
+        } while (Bob.getPointsDeVie() > 0 && Igor.getPointsDeVie() > 0);
     
     }
 

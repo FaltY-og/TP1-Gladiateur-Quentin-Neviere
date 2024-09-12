@@ -104,8 +104,8 @@ public class Personnage {
 
     public void frapperPersonnage(Personnage personnageCible) {
         int dommages;
+                    
         do {            
-            do {            
        
             dommages = attaqueCalcul() - personnageCible.valeurDefense;
             
@@ -113,11 +113,11 @@ public class Personnage {
         
         personnageCible.pointsDeVie -= dommages;
         
-            if (personnageCible.pointsDeVie < 0) {
-                personnageCible.pointsDeVie += dommages;
-            }
+        if (personnageCible.pointsDeVie < 0) {
+            personnageCible.pointsDeVie = 0;
+        }
             
-        } while (personnageCible.pointsDeVie < 0);
+        
         
         System.out.println();
         System.out.println(this.nom + " attaque avec une puissance de : " + attaqueCalcul());
