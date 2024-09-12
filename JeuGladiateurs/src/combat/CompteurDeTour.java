@@ -34,7 +34,7 @@ public class CompteurDeTour {
 
     public void afficheTour() {
         System.out.println("---------------");
-        System.out.println("TOUR ACTUEL: 1");
+        System.out.println("TOUR ACTUEL : " + cptrTour);
         System.out.println("---------------");
     }
     // </editor-fold>
