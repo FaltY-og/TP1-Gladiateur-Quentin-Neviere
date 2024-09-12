@@ -77,7 +77,7 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
-        System.out.println("\n");
+        System.out.println();
         System.out.println("\t" + getNom());
         System.out.println("\t Attaque : " + getValeurMaxAttaque());
         System.out.println("\t Défense : " + getValeurDefense());
@@ -97,15 +97,34 @@ public class Personnage {
         
         int minValue = 0;
         int maxValue = valeurMaxAttaque;
-        int attaque = rand.nextInt(maxValue - minValue)+ minValue;
+        int attaque = rand.nextInt(maxValue - minValue) + minValue;
         
         return attaque;
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
-        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
-        //modifier les points de vie du personnage cible, afficher les détails
-        // sur l'attaque, tel que montré dans l'énoncé.
+        int dommages;
+        do {            
+            do {            
+       
+            dommages = attaqueCalcul() - personnageCible.valeurDefense;
+            
+        } while (dommages < 0);
+        
+        personnageCible.pointsDeVie -= dommages;
+        
+            if (personnageCible.pointsDeVie < 0) {
+                personnageCible.pointsDeVie += dommages;
+            }
+            
+        } while (personnageCible.pointsDeVie < 0);
+        
+        System.out.println();
+        System.out.println(this.nom + " attaque avec une puissance de : " + attaqueCalcul());
+        System.out.println(personnageCible.nom + " a une défense de : " + personnageCible.valeurDefense);
+        System.out.println("Les dommages sont donc de : " + dommages);
+        
+        
     }
 
     public void setNewInitiativeRandom() {
