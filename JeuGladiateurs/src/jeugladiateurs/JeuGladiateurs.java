@@ -31,11 +31,7 @@ public class JeuGladiateurs {
     // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
     affichage.afficherDebutCombat();
     
-        Bob.frapperPersonnage(Igor);
-        Bob.frapperPersonnage(Igor);
-        System.out.println();
-        Igor.frapperPersonnage(Bob);
-        Igor.frapperPersonnage(Bob);
+    
     
     }
 

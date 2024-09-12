@@ -128,7 +128,12 @@ public class Personnage {
     }
 
     public void setNewInitiativeRandom() {
-        // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+        Random rand = new Random();
+        
+        int minValue = 0;
+        int maxValue = 100;
+        this.initiative = rand.nextInt(maxValue - minValue) + minValue;
+        
     }
     // </editor-fold>
     
