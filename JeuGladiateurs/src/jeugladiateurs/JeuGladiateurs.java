@@ -57,6 +57,8 @@ public class JeuGladiateurs {
             
             affichage.afficherSeparateurDeTour();
         } while (Bob.getPointsDeVie() > 0 && Igor.getPointsDeVie() > 0);
+        
+        affichage.afficheVictoire(Bob, Igor);
     
     }
 
