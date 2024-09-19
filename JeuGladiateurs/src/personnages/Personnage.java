@@ -91,7 +91,7 @@ public class Personnage {
         
     }
 
-    private int attaqueCalcul() {
+    protected int attaqueCalcul() {
         
         Random rand = new Random();
         
